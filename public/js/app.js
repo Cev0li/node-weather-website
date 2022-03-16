@@ -4,6 +4,7 @@ const weatherForm = document.querySelector('#weathersubmit')
 const search = document.querySelector('#locationbutton')
 const messageOne = document.querySelector('#messageone')
 const messageTwo = document.querySelector('#messagetwo')
+const img = document.querySelector("img"); 
 
 
 weatherForm.addEventListener('submit', (e) => {
@@ -23,6 +24,7 @@ weatherForm.addEventListener('submit', (e) => {
                 } else {
                     messageOne.textContent = data.location
                     messageTwo.textContent = data.forecast
+                    img.src = data.img
                 }
     })
 })
